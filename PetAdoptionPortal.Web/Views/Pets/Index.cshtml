@@ -1,0 +1,66 @@
+﻿@using System.Linq
+@model IEnumerable<PetAdoptionPortal.Infrastructure.Entities.Pet>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info mt-3">
+        @TempData["Message"]
+    </div>
+}
+
+<div class="bg-warning-subtle rounded-4 p-4 my-4 text-center shadow-sm">
+    <h2 class="fw-bold fs-1" style="font-family: 'Baloo 2', cursive; color:#4B3621;">
+        🐾 Adoptable Pets
+    </h2>
+    <p class="text-secondary fs-5">
+        Every pet deserves a forever home — find yours today!
+    </p>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            @foreach (var pet in Model)
+            {
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="card border-0 rounded-4 shadow-sm h-100 overflow-hidden">
+                        <img src="@pet.ImageUrl" alt="@pet.Name"
+                             class="card-img-top"
+                             style="height:220px; object-fit:cover;" />
+
+                        <div class="card-body text-center" style="font-family: 'Baloo 2', cursive;">
+                            <h5 class="fw-bold text-dark mb-2">@pet.Name</h5>
+                            <p class="mb-1 text-muted">🐾 <strong>Species:</strong> @pet.Species</p>
+                            <p class="mb-1">🎂 <strong>Age:</strong> @pet.Age</p>
+                            <p class="mb-1">🚻 <strong>Gender:</strong> @pet.Gender</p>
+                            <p class="mb-1">💬 <strong>Personality:</strong> @pet.Personality</p>
+
+                            <p class="mt-2">
+                                📍 <strong>Status:</strong>
+                                <span class="badge bg-@(pet.Status == "Available" ? "success" : "secondary")">
+                                    @pet.Status
+                                </span>
+                            </p>
+
+                            @* Only show "Edit" button if the user is logged in *@
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a asp-action="Edit" asp-route-id="@pet.Id"
+                                   class="btn btn-outline-warning rounded-pill px-3 py-1 mt-3">
+                                    ✏️ Edit
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <p class="text-center text-muted fst-italic">
+        No adoptable pets posted yet.
+    </p>
+}

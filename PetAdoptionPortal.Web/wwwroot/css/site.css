@@ -1,0 +1,436 @@
+/* === FONT SETUP === */
+body, h1, h2, h3, h4, h5, h6, p, a, button, .btn, .navbar, .hero, .stats {
+    font-family: 'Baloo 2', cursive;
+}
+
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.hero-section {
+    padding: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hero-text {
+    flex: 1 1 45%;
+    max-width: 500px;
+}
+
+    .hero-text h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        color: #555;
+    }
+
+.hero-image {
+    flex: 1 1 45%;
+}
+
+    .hero-image img {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #fff;
+    }
+
+.about-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    border-radius: 16px;
+}
+
+.btn-warning {
+    background-color: #ffa726;
+    border: none;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+    .btn-warning:hover {
+        background-color: #ff9800;
+        color: #fff;
+    }
+/* === NAVBAR === */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #333 !important;
+}
+
+.navbar .nav-link {
+    color: #555 !important;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+    .navbar .nav-link:hover {
+        color: #ff9800 !important;
+    }
+
+/* === HERO SECTION === */
+.hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+    .hero h1 {
+        font-size: 4.5rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+.hero-image img {
+    width: 480px; /* dati 400px – mas malaki na */
+    height: 480px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: relative;
+    left: 120px; /* iusog ng konti sa right side */
+}
+
+/* === STATS SECTION === */
+.stats {
+    background-color: #fdf6ee;
+}
+
+/* === BUTTONS === */
+.btn-warning {
+    background-color: #ff9800;
+    border: none;
+}
+
+    .btn-warning:hover {
+        background-color: #fb8c00;
+    }
+
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+p, a, button {
+    font-weight: 500;
+}
+.adoption-container {
+    background-color: #1a1a2e;
+    color: #fff;
+    border-radius: 40px;
+    padding: 60px 80px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.adoption-fact {
+    flex: 1;
+    max-width: 600px;
+}
+
+    .adoption-fact h3 {
+        font-family: 'Baloo 2', sans-serif;
+        color: #ffb347;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .adoption-fact p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        color: #f2f2f2;
+    }
+
+.fact-dog img {
+    width: 350px;
+    height: auto;
+    position: relative;
+    top: -80px;
+    border-radius: 25px;
+}
+.adopt-hero {
+    text-align: center;
+    background: #fff8f5;
+    padding: 60px 20px;
+    border-radius: 25px;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+    .adopt-hero h1 {
+        font-family: 'Baloo 2', cursive;
+        font-size: 3rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+.adopt-subtitle {
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+}
+
+.btn-adopt {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+    .btn-adopt:hover {
+        background-color: #ff816f;
+    }
+
+.pet-list-section {
+    padding: 60px 40px;
+}
+
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pet-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .pet-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .pet-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .pet-card h3 {
+        margin-top: 15px;
+        color: #333;
+        font-family: 'Baloo 2', cursive;
+        font-size: 1.4rem;
+    }
+
+.species {
+    color: #777;
+    font-size: 0.95rem;
+    margin: 5px 0;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+    .status.available {
+        background-color: #d8f8e1;
+        color: #1a7f37;
+    }
+
+    .status.adopted {
+        background-color: #ffe0e0;
+        color: #d32f2f;
+    }
+
+.card-actions {
+    margin-top: 12px;
+}
+
+.btn-edit {
+    font-size: 0.9rem;
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+    .btn-edit:hover {
+        text-decoration: underline;
+    }
+
+.no-pets {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    margin-top: 40px;
+}
+.pets-hero {
+    text-align: center;
+    background: #fff8f5;
+    padding: 60px 20px;
+    border-radius: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+    .pets-hero h1 {
+        font-family: 'Baloo 2', cursive;
+        font-size: 3rem;
+        color: #333;
+    }
+
+    .pets-hero p {
+        color: #666;
+        font-size: 1.1rem;
+    }
+
+.btn-adopt {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+    .btn-adopt:hover {
+        background-color: #ff816f;
+    }
+
+.pets-gallery {
+    padding: 60px 40px;
+}
+
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.pet-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+    .pet-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .pet-card img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .pet-card h3 {
+        margin-top: 15px;
+        color: #333;
+        font-family: 'Baloo 2', cursive;
+    }
+
+.pet-breed {
+    color: #777;
+    font-size: 0.95rem;
+    margin: 3px 0;
+}
+
+.pet-info {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.pet-personality {
+    color: #555;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+    .status.available {
+        background-color: #d8f8e1;
+        color: #1a7f37;
+    }
+
+    .status.adopted {
+        background-color: #ffe0e0;
+        color: #d32f2f;
+    }
+
+.btn-edit {
+    display: inline-block;
+    background-color: #f3f3f3;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #444;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    transition: 0.2s ease;
+}
+
+    .btn-edit:hover {
+        background-color: #ddd;
+    }

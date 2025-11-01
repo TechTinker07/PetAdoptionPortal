@@ -1,0 +1,47 @@
+﻿@model PetAdoptionPortal.Infrastructure.Entities.Pet
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm rounded-4">
+                <img src="@Model.ImageUrl" class="card-img-top" style="height:300px; object-fit:cover; border-top-left-radius: .75rem; border-top-right-radius: .75rem;" alt="@Model.Name">
+                
+                <div class="card-body text-center">
+                    <h3 class="fw-bold mb-2">@Model.Name</h3>
+                    <p class="mb-1 text-muted">🐾 <strong>Species:</strong> @Model.Species</p>
+                    <p class="mb-1">🎂 <strong>Age:</strong> @Model.Age</p>
+                    <p class="mb-1">🚻 <strong>Gender:</strong> @Model.Gender</p>
+                    <p class="mb-1">💬 <strong>Personality:</strong> @Model.Personality</p>
+                    <p class="mb-3">
+                        📍 <strong>Status:</strong>
+                        <span class="badge bg-@(Model.Status == "Available" ? "success" : "secondary")">
+                            @Model.Status
+                        </span>
+                    </p>
+
+                    @if (TempData["Message"] != null)
+                    {
+                        <div class="alert alert-info">
+                            @TempData["Message"]
+                        </div>
+                    }
+
+                    @if (Model.Status == "Available")
+                    {
+                        <form asp-action="Edit" method="post">
+                            <input type="hidden" asp-for="Id" />
+                            <input type="hidden" asp-for="Status" value="Pending" />
+                            <button type="submit" class="btn btn-warning btn-lg rounded-pill px-5">
+                                🐾 Request to Adopt
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <p class="text-muted fst-italic mt-3">This pet is currently not available for adoption.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+# Visual Studio / .NET Core
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.pdb
+
+# ASP.NET Core
+wwwroot/uploads/   # if you have user-uploaded images
+appsettings.Development.json
+appsettings.local.json
+
+# Rider / JetBrains
+.idea/
+*.iml
+
+# Node / frontend packages (if using npm/yarn)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db

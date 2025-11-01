@@ -1,26 +1,30 @@
 ﻿@model List<string>
 
-<div class="container mt-5">
-    <div class="text-center mb-5">
-        <h2 class="fw-bold fs-1" style="font-family: 'Baloo 2', cursive; color:#4B3621;">
-            🐾 Pet Fun Facts & Tips
-        </h2>
-        <p class="text-secondary fs-5">
-            Learn a few cool things about your furry friends and how to care for them!
-        </p>
-    </div>
+<div class="bg-warning-subtle rounded-4 p-4 my-4 shadow-sm text-center">
+    <h2 class="fw-bold fs-1" style="font-family: 'Baloo 2', cursive; color:#4B3621;">
+        🐾 Pet Welfare & Fun Facts
+    </h2>
+    <p class="text-secondary fs-5">Learn more about keeping your pets happy and healthy!</p>
+</div>
 
+<div class="container mt-4">
     <div class="row justify-content-center">
         @foreach (var fact in Model)
         {
-            <div class="col-md-4 col-lg-3 mb-4">
-                <div class="card border-0 rounded-4 shadow-sm h-100 p-3 text-center">
-                    <div class="mb-3">
-                        <span style="font-size:2rem;">🐶🐱</span>
-                    </div>
-                    <p class="mb-0 fs-6" style="font-family: 'Baloo 2', cursive;">@fact</p>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm p-4 rounded-4 h-100 text-center">
+                    <p class="fs-4 fw-medium mb-3">@fact</p>
                 </div>
             </div>
         }
+    </div>
+
+    <!--Big image at the bottom -->
+    <div class="text-center mt-5">
+        <img src="~/images/petOwner1.jpg" alt="Pet" class="img-fluid rounded-4 shadow-sm" style="max-height:400px;">
+        <!-- Decorative paws -->
+        <img src="~/images/paw.jpg" class="position-absolute" style="width:60px; bottom:150px; left:300px; transform: rotate(-20deg);">
+        <img src="~/images/paw.jpg" class="position-absolute" style="width:100px; bottom:200px; right:315px; transform: rotate(15deg);">
+        <img src="~/images/paw.jpg" class="position-absolute" style="width:40px; bottom:20px; left:30%; transform: rotate(-10deg);">
     </div>
 </div>

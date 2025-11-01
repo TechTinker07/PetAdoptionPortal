@@ -29,12 +29,9 @@
                     <ul class="navbar-nav align-items-lg-center gap-3">
                         <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="Pets" asp-action="FunFacts">Pets</a></li>
+                        <li class="nav-item"><a class="btn btn-warning rounded-pill text-white fw-semibold px-4" asp-controller="Pets" asp-action="FunFacts">Pet Welfare</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                        <li class="nav-item">
-                            <a href="#" class="btn btn-warning rounded-pill text-white fw-semibold px-4">Give a Pet</a>
-                        </li>
-
+                        
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">

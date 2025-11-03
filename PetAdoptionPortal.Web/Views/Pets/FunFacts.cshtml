@@ -1,30 +1,92 @@
-﻿@model List<string>
+﻿@{
+    ViewData["Title"] = "Fun Facts";
+}
 
-<div class="bg-warning-subtle rounded-4 p-4 my-4 shadow-sm text-center">
-    <h2 class="fw-bold fs-1" style="font-family: 'Baloo 2', cursive; color:#4B3621;">
-        🐾 Pet Welfare & Fun Facts
-    </h2>
-    <p class="text-secondary fs-5">Learn more about keeping your pets happy and healthy!</p>
-</div>
+<!-- Hero Section -->
+<section class="position-relative text-white" style="height: 75vh; background: url('/images/care.jpg') center/cover no-repeat;">
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.45);"></div>
 
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        @foreach (var fact in Model)
-        {
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm p-4 rounded-4 h-100 text-center">
-                    <p class="fs-4 fw-medium mb-3">@fact</p>
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-start position-relative" style="z-index: 2;">
+        <h1 class="display-3 fw-bold mb-3" style="font-family: 'Baloo 2', cursive;">Fun Pet Facts 🐾</h1>
+        <p class="fs-5 text-light col-md-7">
+            Discover surprising, heartwarming, and inspiring facts about our furry friends — because learning about them is half the fun!
+        </p>
+    </div>
+</section>
+
+<!-- Fun Facts Section -->
+<section id="funfacts" class="py-5" style="font-family: 'Baloo 2', cursive; background-color: #fffaf4;">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5" style="color: #4B3621;">Did You Know?</h2>
+
+        <div class="row justify-content-center g-4">
+
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-lg rounded-4 h-100">
+                    <div class="card-body p-4">
+                        <div class="display-5 mb-3">🐶</div>
+                        <h4 class="fw-bold text-warning mb-3">Dogs Dream Too!</h4>
+                        <p class="text-muted">Just like humans, dogs go through REM sleep — that’s when they dream about running, playing, or chasing toys!</p>
+                    </div>
                 </div>
             </div>
-        }
-    </div>
 
-    <!--Big image at the bottom -->
-    <div class="text-center mt-5">
-        <img src="~/images/petOwner1.jpg" alt="Pet" class="img-fluid rounded-4 shadow-sm" style="max-height:400px;">
-        <!-- Decorative paws -->
-        <img src="~/images/paw.jpg" class="position-absolute" style="width:60px; bottom:150px; left:300px; transform: rotate(-20deg);">
-        <img src="~/images/paw.jpg" class="position-absolute" style="width:100px; bottom:200px; right:315px; transform: rotate(15deg);">
-        <img src="~/images/paw.jpg" class="position-absolute" style="width:40px; bottom:20px; left:30%; transform: rotate(-10deg);">
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-lg rounded-4 h-100">
+                    <div class="card-body p-4">
+                        <div class="display-5 mb-3">🐱</div>
+                        <h4 class="fw-bold text-warning mb-3">Cats Have a "Right Paw"</h4>
+                        <p class="text-muted">Most cats are actually right-pawed! Just like how most people are right-handed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-lg rounded-4 h-100">
+                    <div class="card-body p-4">
+                        <div class="display-5 mb-3">🐾</div>
+                        <h4 class="fw-bold text-warning mb-3">Pets Reduce Stress</h4>
+                        <p class="text-muted">Simply petting a dog or cat can lower your blood pressure and boost your mood — proven by science!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-lg rounded-4 h-100">
+                    <div class="card-body p-4">
+                        <div class="display-5 mb-3">❤️</div>
+                        <h4 class="fw-bold text-warning mb-3">Adoption Saves Lives</h4>
+                        <p class="text-muted">Every year, adopting a pet gives a second chance to millions of animals waiting for a loving home.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-lg rounded-4 h-100">
+                    <div class="card-body p-4">
+                        <div class="display-5 mb-3">🌍</div>
+                        <h4 class="fw-bold text-warning mb-3">Welfare Matters</h4>
+                        <p class="text-muted">Animal welfare isn’t just care — it’s compassion, respect, and ensuring every creature lives free from harm.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-lg rounded-4 h-100">
+                    <div class="card-body p-4">
+                        <div class="display-5 mb-3">🦴</div>
+                        <h4 class="fw-bold text-warning mb-3">Responsible Pet Parenting</h4>
+                        <p class="text-muted">Feeding right, regular vet visits, and daily love — these simple acts make a lifetime of difference.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
+</section>
